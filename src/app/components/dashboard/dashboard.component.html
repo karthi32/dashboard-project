@@ -1,0 +1,36 @@
+<div class="profile-container">
+    <button class="edit-button" (click)="toggleEditMode()">
+      {{ editMode ? 'Save Changes' : 'Edit Profile' }}
+    </button>
+    <div class="profile-header">
+      <img src="{{ user.avatarLink }}" alt="Avatar" class="avatar">
+      <div class="user-details">
+          <div class="name">
+              <h1>{{ user.firstname }} {{ user.lastname }}</h1>
+              <p>@{{ user.username }}</p>
+            </div>
+        <div class="contact-info">
+            <div class="detail">
+                <label>Email:</label>
+            <p>{{ user.email }}</p>
+          </div>
+          <div class="detail">
+              <label>Phone:</label>
+              <p>{{ user.phone }}</p>
+            </div>
+          <div class="detail">
+              <label>Gender:</label>
+              <p>{{ user.gender }}</p>
+            </div>
+            <div class="detail">
+                <label>Location:</label>
+            <p>{{ user.city }}, {{ user.country }}</p>
+        </div>
+          <div class="detail">
+            <label>Address:</label>
+            <p>{{ user.address }}</p>
+        </div>
+    </div>
+</div>
+</div>
+</div>

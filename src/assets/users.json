@@ -1,0 +1,32 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "email": "sathish@gmail.com",
+      "password": "test1",
+      "username": "sathish121",
+      "firstname": "Sathish",
+      "lastname": "Kumar",
+      "gender": "Male",
+      "country": "India",
+      "city": "Chennai",
+      "address": "123 Main Street",
+      "phone": "+91 9876543210",
+      "avatarLink": "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+    },
+    {
+      "id": "2",
+      "email": "karthi@gmail.com",
+      "firstname": "Karthi",
+      "password": "test1",
+      "lastname": "Palanivel",
+      "username": "karthi11",
+      "phone": 9494949495,
+      "gender": "Male",
+      "country": "India",
+      "city": "Chennai",
+      "address": "123 Main Streetttt",
+      "avatarLink": "https://images.pexels.com/photos/428364/pexels-photo-428364.jpeg?auto=compress&cs=tinysrgb&w=600"
+    }
+  ]
+}

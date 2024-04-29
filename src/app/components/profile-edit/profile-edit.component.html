@@ -1,0 +1,79 @@
+<div class="login-container">
+    <div class="card">
+          <h1 class="card-title">Edit Profile</h1>
+          <form class="card-form" [formGroup]="profileForm" (ngSubmit)="saveChanges()">
+              <label for="username">Email:</label>
+              <div class="card-input-container username">
+                <input type="email" id="email" placeholder="Enter your email" formControlName="email">
+                <mat-error *ngIf="profileForm.get('email').hasError('required')">
+                    Email is required
+                </mat-error>
+                <mat-error *ngIf="profileForm.get('email').hasError('email')">
+                    Please enter a valid email address
+                </mat-error>
+              </div>
+              <label for="username">First Name:</label>
+              <div class="card-input-container username">
+                <input type="text" id="firstname" placeholder="Enter your firstname" formControlName="firstname">
+                <mat-error *ngIf="profileForm.get('firstname').hasError('required')">
+                    First Name is required
+                </mat-error>
+            </div>
+              <label for="username">Last Name:</label>
+              <div class="card-input-container username">
+                <input type="text" id="lastname" placeholder="Enter your lastname" formControlName="lastname">
+                <mat-error *ngIf="profileForm.get('lastname').hasError('required')">
+                    Last Name is required
+                </mat-error>
+            </div>
+              <label for="username">Username:</label>
+              <div class="card-input-container username">
+                <input type="text" id="firstname" placeholder="Enter your username" formControlName="username">
+                <mat-error *ngIf="profileForm.get('username').hasError('required')">
+                    User Name is required
+                </mat-error>  
+            </div>
+              <label for="username">Phone:</label>
+              <div class="card-input-container username">
+                <input type="number" id="phone" placeholder="Enter your phone number" formControlName="phone">
+                <mat-error *ngIf="profileForm.get('phone').hasError('required')">
+                    Phone Number is required
+                </mat-error>  
+            </div>
+              <label for="username">Gender:</label>
+              <div class="card-input-container username">
+                <mat-select placeholder="Select your gender" formControlName="gender">
+                  <mat-option value="Male">Male</mat-option>
+                  <mat-option value="Female">Female</mat-option>
+                  <mat-option value="Other">Other</mat-option>
+                </mat-select>
+                <mat-error *ngIf="profileForm.get('gender').hasError('required')">
+                    Gender is required
+                </mat-error>
+              </div>
+              <label for="username">City:</label>
+              <div class="card-input-container username">
+                <input type="text" id="city" placeholder="Enter your city" formControlName="city">
+                <mat-error *ngIf="profileForm.get('city').hasError('required')">
+                    City is required
+                </mat-error>
+            </div>
+              <label for="username">Address:</label>
+              <div class="card-input-container username">
+                <input type="text" id="address" placeholder="Enter your address" formControlName="address">
+                <mat-error *ngIf="profileForm.get('address').hasError('required')">
+                    Address is required
+                </mat-error>  
+            </div>
+              <label for="username">Profile Image Link:</label>
+              <div class="card-input-container username">
+                <input type="text" id="avatarLink" placeholder="Enter your profile image link" formControlName="avatarLink">
+                <mat-error *ngIf="profileForm.get('avatarLink').hasError('required')">
+                    Profile Image is required
+                </mat-error>
+            </div>
+            <button type="submit" class="btn btn-secondary mb-2" [disabled]="profileForm.invalid">Save</button>  
+            <button class="btn btn-danger" (click)="onCancel()">Cancel</button>  
+          </form>
+      </div>
+  </div>

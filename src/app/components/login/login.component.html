@@ -1,0 +1,25 @@
+<div class="login-container">
+  <div class="card">
+        <h1 class="card-title">Login</h1>
+        <form class="card-form" #loginForm="ngForm" (ngSubmit)="login()">
+            <label for="username">Email</label>
+            <div class="card-input-container username">
+                <input type="email" name="email" #emailField="ngModel" placeholder="Enter your email" id="email" [(ngModel)]="email" required email>
+                <mat-error *ngIf="emailField.touched && emailField.hasError('required')">
+                    * This field is required
+                </mat-error>
+                <mat-error *ngIf="emailField.touched && emailField.hasError('email')">
+                    Please enter a valid email address
+                </mat-error>
+            </div>
+            <label for="password">Password</label>
+            <div class="card-input-container password">
+                <input type="password" name="password" #passwordField="ngModel" placeholder="Enter your password" id="password" [(ngModel)]="password" required>
+                <mat-error *ngIf="passwordField.touched && passwordField.hasError('required')">
+                    * This field is required
+                  </mat-error>
+            </div>
+            <button class="card-button" type="submit">Sign In</button>
+        </form>
+    </div>
+</div>

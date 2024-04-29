@@ -1,0 +1,16 @@
+<div class="header-container">
+    <div class="header-simple">
+      <div class="witdh-20 px-5 company"> 
+        Rudram
+        </div>
+    
+        <div class="nav-content w-75"> 
+        </div>
+    
+        <div class="witdh-20 center profile"> 
+            <img class="img" [src]="userInfo?.avatarLink || dummyIcon"> 
+            <span class="px-2">{{ userInfo?.firstname }}</span>
+            <button class="logout btn btn-secondary" (click)="onLogout()">Logout</button>
+        </div>
+      </div>
+    </div>
